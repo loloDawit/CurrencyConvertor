@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="292.0" prefWidth="244.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="currecyconvertor.UI.CurrecyCUIController">
+   <children>
+      <VBox layoutX="38.0" layoutY="6.0" prefHeight="235.0" prefWidth="420.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label text="From">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="fromRate" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Label text="To">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="toRate" prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <HBox prefHeight="28.0" prefWidth="316.0">
+               <children>
+                  <Label text="Exch Rate" />
+                  <TextField fx:id="exchRateTextField" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="28.0" prefWidth="316.0">
+               <children>
+                  <Label text="Amount    " />
+                  <TextField fx:id="amountField" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="answerLable" prefHeight="29.0" prefWidth="411.0" text="Rate:" wrapText="true" />
+            <Button mnemonicParsing="false" onAction="#calculate" text="Calculate">
+               <VBox.margin>
+                  <Insets left="75.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

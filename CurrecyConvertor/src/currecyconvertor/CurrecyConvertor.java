@@ -41,7 +41,7 @@ public class CurrecyConvertor {
      * @param strUrl
      * @return 
      */
-    private static CurrecyConversion getResponse(String strUrl) {
+    public static CurrecyConversion getResponse(String strUrl) {
         CurrecyConversion response = null;
         
         Gson gson = new Gson();
@@ -51,7 +51,6 @@ public class CurrecyConvertor {
             System.out.println("Application Error");
             return null;
         }
-        
         URL url; 
         try {
             url = new URL(strUrl);
@@ -65,6 +64,7 @@ public class CurrecyConvertor {
             }
             stream.close();
             response = gson.fromJson(sb.toString(), CurrecyConversion.class);
+            //System.out.println(sb.toString());
         } catch(IOException e){
             System.out.println(e.getMessage());
         }

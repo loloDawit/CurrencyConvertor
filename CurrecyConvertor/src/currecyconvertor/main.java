@@ -5,6 +5,10 @@
  */
 package currecyconvertor;
 
+import com.mashape.unirest.http.HttpResponse;
+import com.mashape.unirest.http.JsonNode;
+import com.mashape.unirest.http.Unirest;
+import com.mashape.unirest.http.exceptions.UnirestException;
 import static currecyconvertor.CurrecyConvertor.convert;
 import java.util.Scanner;
 
@@ -13,9 +17,13 @@ import java.util.Scanner;
  * @author dawitabera
  */
 public class main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    
+    static HttpResponse<JsonNode> response;
+    static String print = "https://restcountries-v1.p.mashape.com/currency/NOK";
+    
+    public static void main(String[] args) throws Exception {
         
+        Scanner scanner = new Scanner(System.in);
         System.out.println("What is your currency code ?");
 	String fromCurrencyCode = scanner.next();
         
@@ -33,5 +41,4 @@ public class main {
         System.out.println("Currency Rate: " + conRate);
         System.out.println("The: " + amount + " "+ fromCurrencyCode + " is "+ (conRate*amount)+" "+toCurrencyCode + " today" );
     }
-    
 }
